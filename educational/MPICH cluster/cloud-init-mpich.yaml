@@ -1,0 +1,66 @@
+users:
+  - default
+  - name: mpiuser
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ssh_authorized_keys:
+    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDKHcHDIRAyHrLdNStksVCvSdHfsS76q393fItG8TbWylmYw2Kwe/217dP74ZFxMRkociRU4a3jujC0hvZvUXjj8nYv+KAk4xy0kN9RgJRqNgL2g/q/2qsd9rcPRXJobk0a7DOYoxIXimT+i/t8KQbCOfZxlOlo12c79VOayhBswTNPiFr6TwV3TMCH76qLrL4uKY9OVHMqJwCIF7cu6AlUSZDi56ucBdJ9RJfv7xDwoOHxG3/hA4M5B+5TJXzj4M9zFPxt7TdmNK7Oj964bYc53am5h2ehjZtcB8ijq1STABF6JCih5rfGMIgdcNOFG8PSdK9yc+Xin7ncI00Gz/1hvMJKW5mjyzbnbhoiN1Ru3CMlxmS0m9tzJTL1uzOJV1IHHDolsFTQBqFnIwKP9nxZAukzICWhQekPoUNAcsIuf7+1Dz0YeC2UihjoAV4CGASQs0qqfgy4BK0XippYVFFypvyA30UT7S6fuQuctll3sSy0zWg3KEn9AkJ6b1bU8Mc= mpiuser
+    shell: /bin/bash
+    password: $6$rounds=4096$9qwN.CaykZDih4D$h0LbbJyXpZ2aEAyrxBI0c5lYPQHqIsPLI8mxz9sD2ApSvHEt6sEEva67J4GBQzL9FFgxOeFpNU2JTNKLpXQpj0
+    
+packages:
+  - mpich
+  - mpich-doc
+  - libmpich12
+  - libmpich-dev
+
+write_files:
+  - content: |
+      -----BEGIN OPENSSH PRIVATE KEY-----
+      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
+      CJlNdlqnPZhWsAAAAHbXBpdXNlcgECAwQ=
+      -----END OPENSSH PRIVATE KEY-----
+    path: /home/mpiuser/.ssh/multipass-ssh-key
+    owner: mpiuser:mpiuser
+    permissions: '600'
+  - content: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDKHcHDIRAyHrLdNStksVCvSdHfsS76q393fItG8TbWylmYw2Kwe/217dP74ZFxMRkociRU4a3jujC0hvZvUXjj8nYv+KAk4xy0kN9RgJRqNgL2g/q/2qsd9rcPRXJobk0a7DOYoxIXimT+i/t8KQbCOfZxlOlo12c79VOayhBswTNPiFr6TwV3TMCH76qLrL4uKY9OVHMqJwCIF7cu6AlUSZDi56ucBdJ9RJfv7xDwoOHxG3/hA4M5B+5TJXzj4M9zFPxt7TdmNK7Oj964bYc53am5h2ehjZtcB8ijq1STABF6JCih5rfGMIgdcNOFG8PSdK9yc+Xin7ncI00Gz/1hvMJKW5mjyzbnbhoiN1Ru3CMlxmS0m9tzJTL1uzOJV1IHHDolsFTQBqFnIwKP9nxZAukzICWhQekPoUNAcsIuf7+1Dz0YeC2UihjoAV4CGASQs0qqfgy4BK0XippYVFFypvyA30UT7S6fuQuctll3sSy0zWg3KEn9AkJ6b1bU8Mc= mpiuser
+    path: /home/mpiuser/.ssh/multipass-ssh-key.pub
+    owner: mpiuser:mpiuser
+    permissions: '644'
+
+runcmd:
+  - sudo -H -u mpiuser bash -c 'eval "$(ssh-agent -s)"'
+  - sudo -H -u mpiuser bash -c 'ssh-add /home/mpiuser/.ssh/multipass-ssh-key'

@@ -1,0 +1,43 @@
+#
+# script for configuring a multipass server with apache2 and php5.6
+# 
+# Copyright 2021, 2022 Pixelada S. Coop. And. <info (at) pixelada (dot) org>
+#
+# script for configuring a multipass server with apache2 and php5.6 is free software: you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# script for configuring a multipass server with apache2 and php5.6 is distributed in the hope that it will 
+# be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with script for configuring a multipass server with apache2 and php5.6.  
+# If not, see <https://www.gnu.org/licenses/>.
+
+# it requires an old ubuntu version, 14.04 for php5.59
+
+# Automatically update all of the packages
+package_upgrade: true
+package_reboot_if_required: true
+
+# Install the LAMP stack for me
+packages:
+ - apache2
+ - mariadb-server
+ - mariadb-client
+ - libapache2-mod-php8.1
+ - php8.1-mysql
+ - phpmyadmin
+ - composer
+
+# Replace index.html with index.php
+runcmd:
+ - echo '<?php echo "webserver running well" ?>' > /var/www/html/index.php
+ - rm /var/www/html/index.html
+ - sudo echo "GRANT ALL ON *.* TO 'db_user'@'localhost' IDENTIFIED BY 'dbuserpass'; FLUSH PRIVILEGES;" > /tmp/database_user.sql
+ - sudo mysql -uroot < /tmp/database_user.sql
+ - sudo a2enmod rewrite && sudo a2enmod headers && sudo systemctl restart apache2
+
