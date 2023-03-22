@@ -1,21 +1,17 @@
-#
-# script for configuring a multipass server with apache2 and php5.6
 # 
-# Copyright 2021, Pixelada S. Coop. And. <info (at) pixelada (dot) org>
+# Copyright (C) 2023 Joaquín Cuéllar <joa.cuellar@riseup.net>
 #
-# script for configuring a multipass server with apache2 and php5.6 is free software: you can redistribute it and/or modify it
-# under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# script for configuring a multipass server with apache2 and php5.6 is distributed in the hope that it will 
-# be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+# 'My multipass cloud init configurations' is free software: you can redistribute it
+# and/or modify it under the terms of the GNU General Public License as published by 
+# the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# 'My multipass cloud init configurations' is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+# See the GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with script for configuring a multipass server with apache2 and php5.6.  
-# If not, see <https://www.gnu.org/licenses/>.
+# along with 'My multipass cloud init configurations'.  If not, see <https://www.gnu.org/licenses/>.
+#
 
 # it requires an old ubuntu version, 14.04 for php5.59
 
